@@ -1,0 +1,119 @@
+/* tooltip */
+
+.seo {
+    /* text-decoration: underline; */
+    cursor: pointer;
+    position: relative;
+}
+.seo:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    font-size: 8px;
+}
+
+/* hero */
+
+
+/* header */
+
+header {
+    /* display: inline-block; */
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+header h1 {
+    display: inline-block;
+    justify-content: flex-end;
+    font-size: 48px;
+}
+header h1 .seo {
+    color: #d9dcd6;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+section img {
+    max-height: 200px;
+}
+
+
+/* -------------------- MAIN -------------------- */
+
+@media screen and (max-width:768px) {
+
+    main, article {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    article {
+        flex: 1;
+        order: 1;
+
+    }
+
+    .benefits {
+        flex: 3;
+        order: 3;
+        margin-right: 20px;
+        padding: 20px;
+        clear: both;
+        width: 100%;
+        height: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: #2589bd;
+    }
+
+    section {
+        flex: 3;
+        order: 3;
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+/* footer */
+
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 20px;
+}
